@@ -1,0 +1,83 @@
+/* —— Header + Nav —— */
+.dark-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(90deg,
+      var(--navy) 0%,
+      var(--navy-darker) 50%,
+      var(--navy-darkest) 100%);
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.nav-center {
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  flex-wrap: nowrap;
+}
+
+.logo img {
+  height: 40px;
+  display: block;
+}
+
+.main-nav {
+  display: flex;
+  gap: 2em;
+}
+
+.main-nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: var(--canar-green);
+}
+
+/* —— Responsywność —— */
+
+/* —— Responsywność —— */
+
+.expand-btn.pulse-animation {
+  animation: buttonPulse 2s ease-in-out 3;
+}
+
+.btn-small:hover {
+  background: var(--navy);
+  color: var(--white);
+}
+
+/* —— Responsywność —— */
+
+/* —— Responsywność —— */
+
+/* Bardzo małe ekrany */
+
+/* —— Responsywność —— */
+
+/* —— Menu Rozwijane —— */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  color: var(--white);
+}
+
+/* —— Responsywność —— */
+
+/* —— Responsywność —— */

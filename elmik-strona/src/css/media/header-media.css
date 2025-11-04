@@ -1,0 +1,541 @@
+/* Media queries extracted from header.css */
+
+@media (max-width: 768px) {
+
+  .section-title,
+  .services-grid h2,
+  #kadra h2,
+  #onas h2,
+  #realizacje h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2.5em;
+    padding-top: 1em;
+  }
+
+  .services-grid,
+  #kadra,
+  .about-section,
+  .realizacje-section {
+    padding-top: 4em;
+    padding-bottom: 4em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+  }
+
+  .section-title::after,
+  .services-grid h2::after,
+  #kadra h2::after,
+  #onas h2::after,
+  #realizacje h2::after {
+    width: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .section-title,
+  .services-grid h2,
+  #kadra h2,
+  #onas h2,
+  #realizacje h2 {
+    font-size: 2rem;
+    margin-bottom: 2em;
+  }
+
+  .services-grid,
+  #kadra,
+  .about-section,
+  .realizacje-section {
+    padding-top: 3em;
+    padding-bottom: 3em;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+
+@media (max-width: 768px) {
+  .expand-btn {
+    padding: 0.9em 2em;
+    font-size: 0.9em;
+    min-width: 180px;
+    height: 45px;
+    margin-top: 2.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  .expand-btn {
+    padding: 0.8em 1.5em;
+    font-size: 0.85em;
+    min-width: 160px;
+    height: 40px;
+    margin-top: 2em;
+    letter-spacing: 0.3px;
+  }
+
+  .expand-btn::after {
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 1024px) {
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5em;
+  }
+}
+
+@media (max-width: 768px) {
+  .company-info {
+    padding: 4em 1.5em 2.5em;
+  }
+
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5em;
+  }
+
+  .contact-item {
+    padding: 1.5em 1.2em;
+    border-radius: 12px;
+  }
+
+  .contact-icon {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 1em;
+  }
+
+  .contact-icon img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .contact-info h3 {
+    font-size: 0.95em;
+  }
+
+  .contact-info p {
+    font-size: 0.85em;
+  }
+
+  .social .contact-icon {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .company-info {
+    padding: 3em 1em 2em;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2em;
+  }
+
+  .contact-item {
+    padding: 1.2em 1em;
+    text-align: center;
+  }
+
+  .contact-icon {
+    margin: 0 auto 1em;
+  }
+
+  .contact-info h3 {
+    font-size: 0.95em;
+    margin-bottom: 0.3em;
+  }
+
+  .contact-info p {
+    font-size: 0.85em;
+  }
+}
+
+@media (max-width: 1024px) {
+  .about-wrapper {
+    gap: 3em;
+  }
+
+  .about-img {
+    min-height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 4em 1.5em;
+  }
+
+  .about-wrapper {
+    grid-template-columns: 1fr;
+    gap: 3em;
+  }
+
+  .about-img {
+    min-height: 300px;
+    order: 2;
+  }
+
+  .about-content {
+    order: 1;
+    text-align: center;
+  }
+
+  .about-content h2,
+  .about-content p {
+    margin-left: 0;
+  }
+
+  .about-content h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .about-img::before {
+    width: 80px;
+    height: 80px;
+    top: -15px;
+    left: -15px;
+  }
+
+  .about-img::after {
+    width: 60px;
+    height: 60px;
+    bottom: -20px;
+    right: -20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section {
+    padding: 3em 1em;
+  }
+
+  .about-wrapper {
+    gap: 2em;
+  }
+
+  .about-img {
+    min-height: 250px;
+  }
+
+  .about-content h2 {
+    font-size: 2rem;
+  }
+
+  .about-content p {
+    font-size: 1em;
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .main-nav {
+    flex-direction: column;
+    gap: 0.5em;
+  }
+
+  .services-grid h2 {
+    font-size: 2.5em;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .two-col {
+    flex-direction: column;
+  }
+
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 1rem;
+  }
+
+  .main-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--navy);
+    backdrop-filter: blur(10px);
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 100;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 0 0 16px 16px;
+  }
+
+  .main-nav.open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .main-nav li {
+    transform: translateX(-20px);
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 100%;
+    text-align: center;
+  }
+
+  .main-nav li a {
+    display: block;
+    padding: 16px 24px;
+    width: 100%;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+  }
+
+  .main-nav li a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(8px);
+  }
+
+  .main-nav.open li {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  /* Dodanie opóźnienia */
+  .main-nav.open li:nth-child(1) {
+    transition-delay: 0.1s;
+  }
+
+  .main-nav.open li:nth-child(2) {
+    transition-delay: 0.15s;
+  }
+
+  .main-nav.open li:nth-child(3) {
+    transition-delay: 0.2s;
+  }
+
+  .main-nav.open li:nth-child(4) {
+    transition-delay: 0.25s;
+  }
+
+  .main-nav.open li:nth-child(5) {
+    transition-delay: 0.3s;
+  }
+
+  /* HERO CAPTION */
+  .hero-slider {
+    height: 50vh;
+  }
+
+  .hero-caption {
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: auto;
+    bottom: 20%;
+    padding: 1rem;
+  }
+
+  .hero-slider {
+    height: 60vh;
+    min-height: 400px;
+  }
+
+  .hero-slider::after {
+    height: 60px;
+  }
+
+  .hero-caption h2 {
+    font-size: 1.5rem;
+    line-height: 1.3;
+    margin-bottom: 0.8rem;
+  }
+
+  .hero-caption h3 {
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-caption .cta-button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .stats-section {
+    padding: 1.5em 0.5em;
+  }
+
+  .stats-container {
+    gap: 0.75em;
+  }
+
+  .stat-item {
+    flex: 0 1 48%;
+    margin: 0.5em 0;
+  }
+
+  .stat-item img {
+    width: 30px;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
+  }
+
+  .hero-slider {
+    height: 55vh;
+    min-height: 350px;
+  }
+
+  .hero-slider::after {
+    height: 50px;
+  }
+
+  .hero-caption {
+    width: 92%;
+    padding: 1.2rem 1rem;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 12px;
+  }
+
+  .hero-caption h2 {
+    font-size: 1.3rem;
+    line-height: 1.25;
+    margin-bottom: 0.6rem;
+  }
+
+  .hero-caption h3 {
+    font-size: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .cta-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    margin-top: 0.8rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero-slider {
+    height: 50vh;
+    min-height: 320px;
+  }
+
+  .hero-slider::after {
+    height: 40px;
+  }
+
+  .hero-caption {
+    width: 95%;
+    padding: 1rem 0.8rem;
+  }
+
+  .hero-caption h2 {
+    font-size: 1.15rem;
+    line-height: 1.2;
+  }
+
+  .hero-caption h3 {
+    font-size: 0.75rem;
+  }
+
+  .cta-button {
+    padding: 0.45rem 0.9rem;
+    font-size: 0.8rem;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .realizacje-section {
+    padding: 1em 1.5em 4em;
+  }
+
+  .map-container {
+    padding: 2em 1.5em;
+  }
+
+  .map-intro {
+    margin-bottom: 2em;
+  }
+
+  .map-intro h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.6em;
+  }
+
+  .map-intro h3::after {
+    height: 2px;
+    bottom: -6px;
+  }
+
+  .map-intro p {
+    font-size: 1em;
+    line-height: 1.6;
+    max-width: 90%;
+  }
+
+  .map-legend {
+    flex-direction: column;
+    gap: 1em;
+    padding: 1.2em 1.5em;
+    margin-top: 2em;
+  }
+
+  .map-legend h4 {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .realizacje-section {
+    padding: 1em 1em 3em;
+  }
+
+  .map-container {
+    padding: 1.5em 1em;
+    border-radius: 16px;
+  }
+
+  .map-intro h3 {
+    font-size: 1.5rem;
+  }
+
+  .map-intro p {
+    font-size: 0.95em;
+  }
+
+  .map-legend {
+    padding: 1em;
+    gap: 0.8em;
+  }
+
+  .legend-item {
+    font-size: 0.85em;
+  }
+}

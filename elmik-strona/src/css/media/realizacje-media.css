@@ -1,0 +1,18 @@
+/* Media queries extracted from realizacje.css */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .map-intro h3::after,
+  .map-intro p,
+  .client-point,
+  .legend-dot,
+  .tooltip {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .map-intro p {
+    opacity: 1;
+    transform: none;
+  }
+}

@@ -1,0 +1,10 @@
+/* —— Footer —— */
+footer.site-footer {
+  background: var(--navy-darker);
+  color: var(--white);
+  text-align: center;
+  padding: 2em 1em;
+  margin-top: 0;
+  border-top: 4px solid var(--canar-green);
+  font-size: 0.9em;
+}
