@@ -1,13 +1,12 @@
 /* —— Services Grid —— */
 .services-grid {
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  background: var(--light-bg);
   padding: 4em 2em;
   text-align: center;
 }
 
 .section-title,
 .services-grid h2,
-#kadra h2,
 #onas h2,
 #realizacje h2 {
   font-size: clamp(2.5rem, 4vw, 3.5rem);
@@ -25,7 +24,6 @@
 /* Nowoczesna kreska pod nagłówkami */
 .section-title::after,
 .services-grid h2::after,
-#kadra h2::after,
 #onas h2::after,
 #realizacje h2::after {
   content: "";
@@ -46,7 +44,6 @@
 
 /* Ujednolicone odstępy dla sekcji */
 .services-grid,
-#kadra,
 .about-section,
 .realizacje-section {
   padding-top: 1em;
@@ -55,9 +52,6 @@
   padding-right: 2em;
 }
 
-#kadra {
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-}
 
 /* —— Oferta —— */
 
