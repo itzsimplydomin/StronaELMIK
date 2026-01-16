@@ -7,8 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EL-MiK | Główna</title>
   <meta name="description" content="Instalacje elektryczne.">
-  <link rel="stylesheet" href="./src/css/about.css">
   <link rel="stylesheet" href="./src/css/animations.css">
+  <link rel="stylesheet" href="./src/css/about.css">
   <link rel="stylesheet" href="./src/css/base.css">
   <link rel="stylesheet" href="./src/css/contact.css">
   <link rel="stylesheet" href="./src/css/footer.css">
@@ -17,9 +17,6 @@
   <link rel="stylesheet" href="./src/css/hero.css">
   <link rel="stylesheet" href="./src/css/realizacje.css">
   <link rel="stylesheet" href="./src/css/services.css">
-  <link rel="stylesheet" href="./src/css/media/header-media.css">
-  <link rel="stylesheet" href="./src/css/media/realizacje-media.css">
-  <link rel="stylesheet" href="./src/css/media/hero-slider-media.css">
   <link rel="icon" type="image/png" href="./src/assets/mini-logo.png">
 </head>
 
@@ -39,7 +36,7 @@
         <a href="#glowna">Główna</a>
         <a href="index.html#oferta">Oferta</a>
         <a href="realizacje.html">Realizacje</a>
-        <a href="onas.html">O Nas</a>
+        <a href="#onas">O nas</a>
         <a href="#kontakt">Kontakt</a>
 
       </nav>
@@ -47,42 +44,97 @@
   </header>
 
   <main>
-    <section id="start" class="hero-slider" aria-labelledby="hero-title">
-      <h1 id="hero-title" class="visually-hidden">Instalacje Elektryczne</h1>
-      <div class="slides">
 
-        <div class="slide">
-          <img src="./src/images/hero-elektryka.png" alt="Instalacje elektryczne" loading="lazy">
-          <div class="hero-caption">
-            <img src="./src/icons/mini-light.svg" alt="Brain Logo" loading="lazy">
-            <h2>INSTALACJE ELEKTRYCZNE</h2>
-            <h3>Energia, na której możesz polegać</h3>
-            <a href="index.html#oferta" class="cta-button">Dowiedz się więcej</a>
-          </div>
+    <section id="start" class="hero-section">
+      <div class="hero-background">
+        <img src="./src/images/hero-elektryka.png" alt="Instalacje elektryczne">
+      </div>
+
+      <div class="hero-content">
+        <h1 class="hero-title">
+          Kompleksowe instalacje elektryczne dla Twojego biznesu
+        </h1>
+        <p class="hero-description">
+          Od prostych instalacji po zaawansowane systemy inteligentne – zapewniamy
+          bezpieczeństwo i najwyższą jakość wykonania.
+        </p>
+        <div class="hero-buttons">
+          <a href="#oferta" class="btn-primary">Zobacz ofertę ⚡</a>
+          <a href="#kontakt" class="btn-secondary">Kontakt</a>
         </div>
-
-        <div class="slide">
-          <img src="./src/images/hero-elektryka-2.png" alt="Modyfikacje elektryczne" loading="lazy">
-          <div class="hero-caption">
-            <img src="./src/icons/mini-light.svg" alt="Brain Logo" loading="lazy">
-            <h2>MODYFIKACJE ELEKTRYCZNE</h2>
-            <h3>Zasilamy Twój biznes energią i bezpieczeństwem</h3>
-            <a href="index.html#oferta" class="cta-button">Dowiedz się więcej</a>
-          </div>
-        </div>
-
-        <!-- Dodac kolejne .slide według potrzeby -->
       </div>
     </section>
 
+    <section class="about-section" id="onas">
+      <div class="about-container">
+        <div class="about-left">
+          <h2 class="section-heading">Doświadczenie i profesjonalizm w każdym projekcie</h2>
+
+          <p class="about-text">
+            EL-MiK to firma z wieloletnim doświadczeniem w branży instalacji elektrycznych.
+            Specjalizujemy się w kompleksowej obsłudze obiektów mieszkalnych, biurowych i przemysłowych.
+          </p>
+
+          <p class="about-text">
+            Nasz zespół wykwalifikowanych elektryków zapewnia najwyższą jakość usług,
+            terminowość oraz pełne bezpieczeństwo realizowanych projektów.
+          </p>
+
+          <!-- Statystyki -->
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-number">15+</div>
+              <div class="stat-label">Lat doświadczenia</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">500+</div>
+              <div class="stat-label">Zrealizowanych projektów</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">100%</div>
+              <div class="stat-label">Zadowolonych klientów</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-right">
+          <!-- Karty -->
+          <div class="feature-card card-green">
+            <div class="card-icon">⚡</div>
+            <h3 class="card-title">Certyfikaty</h3>
+            <p class="card-description">Posiadamy wszystkie wymagane certyfikaty i uprawnienia</p>
+          </div>
+
+          <div class="feature-card card-green">
+            <div class="card-icon">🔧</div>
+            <h3 class="card-title">Nowoczesny sprzęt</h3>
+            <p class="card-description">Używamy najnowszych narzędzi i technologii</p>
+          </div>
+
+          <div class="feature-card card-green">
+            <div class="card-icon">🛡️</div>
+            <h3 class="card-title">Gwarancja</h3>
+            <p class="card-description">Na wszystkie usługi udzielamy pełnej gwarancji</p>
+          </div>
+
+
+          <div class="feature-card card-green">
+            <div class="card-icon">🛡️</div>
+            <h3 class="card-title">Doświadczenie</h3>
+            <p class="card-description">Posiadamy bogate doświadczenie poparte realizacją wielu projektów</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
 
     <section id="oferta" class="services-grid" aria-labelledby="oferta-title">
-      <h2 id="oferta-title" class="section-title">OFERTA - STRONA W BUDOWIE</h2>
+      <h2 id="oferta-title" class="section-title">OFERTA</h2>
       <div class="grid">
         <div class="card">
           <img src="./src/icons/ev-charge-svgrepo-com.svg" alt="Instalacje elektryczne" loading="lazy">
           <h3>INSTALACJE ELEKTRYCZNE</h3>
-          <a href="./sieci_komputerowe.html" class="btn-small">SPRAWDŹ OFERTĘ</a>
+          <a href="/src/pages/instalacje-elektryczne.html" class="btn-small">SPRAWDŹ OFERTĘ</a>
         </div>
         <div class="card">
           <img src="./src/icons/lightning-bolt-svgrepo-com.svg" alt="Modyfikacje elektryczne" loading="lazy">
