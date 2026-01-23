@@ -79,28 +79,18 @@
     0 3px 10px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.1);
   will-change: transform, opacity;
-  animation: slideInFromLeft 0.6s ease-out forwards;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Domyślny stan przed animacją */
   opacity: 0;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  transform: translate3d(0, 0, 0);
+  transform: translateX(-100px);
+
+  /* Animacja - czas i opóźnienie ustawione przez nth-child */
+  animation: slideInFromLeft 0.6s ease-out forwards;
   backface-visibility: hidden;
   position: relative;
   overflow: hidden;
-}
-
-.services-grid .grid .card:nth-child(n+9) {
-  display: none;
-}
-
-.services-grid .grid.expanded .card:nth-child(n+9) {
-  display: flex;
-}
-
-.card:hover {
-  transform: translate3d(0, -7px, 0) scale(1.02) !important;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-  transition: transform 0.9s cubic-bezier(0.18, 0.89, 0.32, 1.1),
-    box-shadow 0.9s ease-out;
 }
 
 .card img {
@@ -115,6 +105,79 @@
   text-align: center;
   min-height: 48px;
 }
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02) !important;
+  box-shadow: 0 20px 40px rgba(16, 120, 56, 0.25);
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+.services-grid .grid .card:nth-child(n+9) {
+  display: none;
+}
+
+.services-grid .grid.expanded .card:nth-child(n+9) {
+  display: flex;
+}
+
+/* Animacja dla kontaktu - dla spójności */
+.contact-item {
+  animation: slideInFromLeft 0.6s ease-out forwards;
+}
+
+/* Opóźnienia dla kart 1-8 */
+.contact-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.contact-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.contact-item:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.contact-item:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.contact-item:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.contact-item:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+.contact-item:nth-child(7) {
+  animation-delay: 0.7s;
+}
+
+.contact-item:nth-child(8) {
+  animation-delay: 0.8s;
+}
+
+/* Opóźnienia dla kart 9-11 (gdy są rozwinięte) */
+.services-grid .grid.expanded .card:nth-child(9) {
+  animation-delay: 0.1s;
+}
+
+.services-grid .grid.expanded .card:nth-child(10) {
+  animation-delay: 0.2s;
+}
+
+.services-grid .grid.expanded .card:nth-child(11) {
+  animation-delay: 0.3s;
+}
+
 
 /* Animacje dla kafelków */
 
@@ -149,22 +212,6 @@
 
 .card:nth-child(8) {
   animation-delay: 0.8s;
-}
-
-.card:nth-child(9) {
-  animation-delay: 0.9s;
-}
-
-.card:nth-child(10) {
-  animation-delay: 1.0s;
-}
-
-.card:nth-child(11) {
-  animation-delay: 1.1s;
-}
-
-.card:nth-child(12) {
-  animation-delay: 1.2s;
 }
 
 .btn-small {

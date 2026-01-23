@@ -1,57 +1,91 @@
-document.addEventListener('DOMContentLoaded', () => {
+// ===== Toggle Menu =====
+const menuToggle = document.querySelector('.menu-toggle');
+const mainNav = document.querySelector('.main-nav');
 
-  // Menu toggle
-  const toggle = document.querySelector('.menu-toggle');
-  const nav = document.querySelector('.main-nav');
-  toggle.addEventListener('click', () => nav.classList.toggle('open'));
+if (menuToggle && mainNav) {
+  menuToggle.addEventListener('click', () => {
+    mainNav.classList.toggle('open');
+  });
+}
 
-  // Animacja kafelków
-  const animateCards = () => {
-    const cards = document.querySelectorAll('.services-grid .card');
-    cards.forEach((card, index) => {
-      card.style.opacity = '0';
-      card.style.transform = 'translateX(-100px)';
-      card.style.animation = `slideInFromLeft 0.6s ease-out ${index * 0.1}s forwards`;
-    });
+// ===== Expand/Collapse Offers =====
+const toggleBtn = document.getElementById('toggle-offers');
+const servicesGrid = document.querySelector('.services-grid .grid');
 
-    const btn = document.getElementById('toggle-offers');
-    if (btn) {
-      btn.style.opacity = '0';
-      setTimeout(() => {
-        btn.style.transition = 'opacity 0.5s ease-out';
-        btn.style.opacity = '1';
-      }, cards.length * 100 + 300);
+if (toggleBtn && servicesGrid) {
+  toggleBtn.addEventListener('click', () => {
+    const isExpanded = servicesGrid.classList.contains('expanded');
+
+    if (isExpanded) {
+      servicesGrid.classList.remove('expanded');
+      toggleBtn.textContent = 'Rozwiń ofertę';
+    } else {
+      servicesGrid.classList.add('expanded');
+      toggleBtn.textContent = 'Zwiń ofertę';
+
+      // Animuj nowo pokazane karty (9+)
+      const hiddenCards = document.querySelectorAll('.services-grid .grid .card:nth-child(n+9)');
+      hiddenCards.forEach((card, index) => {
+        card.classList.remove('reveal-animate');
+        card.style.setProperty('--delay', `${index * 0.1}s`);
+        // reflow
+        card.offsetHeight;
+        card.classList.add('reveal-animate');
+      });
     }
-  };
+  });
+}
 
-  // Obsługa przycisku "Rozwiń ofertę"
-  const grid = document.querySelector('.services-grid .grid');
+// ===== Intersection Observer dla animacji przy scrollu =====
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
+};
+
+const animateOnScroll = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animate-in');
+    }
+  });
+}, observerOptions);
+
+// Obserwuj sekcje
+const sections = document.querySelectorAll('.services-grid, .about-section, .company-info');
+sections.forEach(section => {
+  animateOnScroll.observe(section);
+});
+
+// ===== Inicjalizacja animacji kafelków przy załadowaniu strony =====
+document.addEventListener('DOMContentLoaded', () => {
+  
+  const cards = document.querySelectorAll('.services-grid .card');
+  cards.forEach(card => {
+    card.style.opacity = '';
+    card.style.transform = '';
+    card.style.animation = '';
+  });
+
   const btn = document.getElementById('toggle-offers');
+  if (btn) {
+    btn.style.opacity = '';
+    btn.style.transition = '';
+  }
+});
 
-  if (grid && btn) {
-
-    btn.addEventListener('click', () => {
-      const isExpanded = grid.classList.toggle('expanded');
-      btn.textContent = isExpanded ? 'Zwiń ofertę' : 'Rozwiń ofertę';
-
-      if (isExpanded) {
-        const hiddenCards = document.querySelectorAll('.services-grid .grid .card:nth-child(n+9)');
-        hiddenCards.forEach((card, index) => {
-          card.style.animation = `slideInFromLeft 0.6s ease-out ${index * 0.1 + 0.3}s forwards`;
+// ===== Smooth scroll dla linków =====
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    const href = this.getAttribute('href');
+    if (href !== '#' && href.length > 1) {
+      e.preventDefault();
+      const target = document.querySelector(href);
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
         });
       }
-    });
-
-    // Obserwacja wejścia sekcji w viewport
-    const offerObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          animateCards();
-          offerObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-
-    offerObserver.observe(document.querySelector('.services-grid'));
-  }
+    }
+  });
 });

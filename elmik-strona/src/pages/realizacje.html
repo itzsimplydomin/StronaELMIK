@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EL-MiK | CCTV</title>
+    <title>EL-MiK | Realizacje</title>
     <meta name="description" content="Instalacje elektryczne.">
     <link rel="stylesheet" href="../css/about.css">
     <link rel="stylesheet" href="../css/animations.css">
@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="../css/hero.css">
     <link rel="stylesheet" href="../css/services.css">
     <link rel="stylesheet" href="../css/offer.css">
+    <link rel="stylesheet" href="../css/realizacje.css">
     <link rel="stylesheet" href="../css/media/header-media.css">
     <link rel="stylesheet" href="../css/media/hero-slider-media.css">
     <link rel="stylesheet" href="../css/media/realizacje-media.css">
@@ -69,8 +70,94 @@
         </section>
 
         <section id="realisation" class="realisation-section" aria-labelledby="realisation">
+            <h2 class="section-title">NASZE REALIZACJE</h2>
 
-           
+            <div class="gallery-container">
+                <div class="gallery-slider">
+                    <div class="slide-counter">
+                        <span class="current-slide">1</span> / <span class="total-slides">5</span>
+                    </div>
+
+                    <div class="gallery-track">
+                        <!-- Slide 1 -->
+                        <div class="gallery-slide">
+                            <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1200&h=600&fit=crop"
+                                alt="Instalacja elektryczna - Biurowiec Warszawa">
+                            <div class="slide-caption">
+                                <h3>Kompleksowa instalacja elektryczna - Biurowiec Warszawa</h3>
+                                <p>Realizacja pełnej instalacji elektrycznej w 5-piętrowym budynku biurowym, wraz z
+                                    systemem zasilania awaryjnego i inteligentnym oświetleniem.</p>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="gallery-slide">
+                            <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1200&h=600&fit=crop"
+                                alt="Modernizacja instalacji - Zakład produkcyjny">
+                            <div class="slide-caption">
+                                <h3>Modernizacja instalacji - Zakład produkcyjny</h3>
+                                <p>Wymiana i modernizacja całej infrastruktury elektrycznej w zakładzie produkcyjnym,
+                                    włącznie z rozdzielnicami i liniami zasilającymi.</p>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="gallery-slide">
+                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=600&fit=crop"
+                                alt="System inteligentny - Apartamentowiec">
+                            <div class="slide-caption">
+                                <h3>Instalacja inteligentna - Apartamentowiec Premium</h3>
+                                <p>Wdrożenie systemu Smart Home w luksusowym apartamentowcu, sterowanie oświetleniem,
+                                    roletami i klimatyzacją z poziomu aplikacji mobilnej.</p>
+                            </div>
+                        </div>
+
+                        <!-- Slide 4 -->
+                        <div class="gallery-slide">
+                            <img src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?w=1200&h=600&fit=crop"
+                                alt="Instalacja odgromowa">
+                            <div class="slide-caption">
+                                <h3>System ochrony odgromowej - Centrum logistyczne</h3>
+                                <p>Zaprojektowanie i wykonanie kompletnego systemu ochrony odgromowej dla dużego centrum
+                                    logistycznego wraz z pomiarami i dokumentacją.</p>
+                            </div>
+                        </div>
+
+                        <!-- Slide 5 -->
+                        <div class="gallery-slide">
+                            <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1200&h=600&fit=crop"
+                                alt="Monitoring CCTV">
+                            <div class="slide-caption">
+                                <h3>System CCTV - Kompleks handlowy</h3>
+                                <p>Instalacja zaawansowanego systemu monitoringu wizyjnego z 50 kamerami IP oraz
+                                    serwerowniami rejestrującymi w centrum handlowym.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Przyciski nawigacji -->
+                    <button class="gallery-nav nav-prev" aria-label="Poprzedni slajd">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+                        </svg>
+                    </button>
+                    <button class="gallery-nav nav-next" aria-label="Następny slajd">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Wskaźniki -->
+                <div class="gallery-indicators">
+                    <span class="indicator active" data-slide="0"></span>
+                    <span class="indicator" data-slide="1"></span>
+                    <span class="indicator" data-slide="2"></span>
+                    <span class="indicator" data-slide="3"></span>
+                    <span class="indicator" data-slide="4"></span>
+                </div>
+            </div>
+
         </section>
 
         <section id="kontakt" class="company-info" aria-labelledby="kontakt-title">
@@ -136,7 +223,7 @@
         <p>&copy; 2025 EL-MiK – Wszystkie prawa zastrzeżone</p>
     </footer>
 
-    <script type="module" src="./src/main.js" defer></script>
+    <script type="module" src="/src/main.js" defer></script>
 
 </body>
 
